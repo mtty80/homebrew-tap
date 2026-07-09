@@ -11,7 +11,7 @@ class Charon < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_darwin_amd64.tar.gz"
-      sha256 "aa0c4bda2a14e9b3f73fb0c3e0382e001eed2e050f27bbeb4efd0a8f82d2d8ea"
+      sha256 "71a3991df6d286267d14c5355e5a322d688bbfdd660780b89e0e59c3200a3039"
 
       define_method(:install) do
         bin.install "charon"
@@ -22,7 +22,7 @@ class Charon < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_darwin_arm64.tar.gz"
-      sha256 "78a34696822301dc520e88863179392f6a73aa0fdccbf9465d5d304803400423"
+      sha256 "a067ea15319edfe5ae8f38b2d99596eb62a456de0e9403fe52c85c071b6a25f2"
 
       define_method(:install) do
         bin.install "charon"
@@ -36,7 +36,7 @@ class Charon < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_linux_amd64.tar.gz"
-      sha256 "c5c2d8c33bacf47d35e3dbcc564de6ae6cb7fb08459d9782436282f5cd06fe41"
+      sha256 "6dabfe1b72a322cd3453ee1aec79236f783753231b1c0b831033b49cee30af86"
       define_method(:install) do
         bin.install "charon"
         bash_completion.install "completions/charon.bash" => "charon"
@@ -46,7 +46,7 @@ class Charon < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_linux_arm64.tar.gz"
-      sha256 "c435cdfdef65a90bc56b3d00fd4b311466f6d200525b3ab4cf74cc38fc76bb21"
+      sha256 "9bdec95f153ebd5a259d0d628b92ed18f1c073dcadecfb3d73fbfad7d8f7552e"
       define_method(:install) do
         bin.install "charon"
         bash_completion.install "completions/charon.bash" => "charon"
