@@ -5,13 +5,13 @@
 class Charon < Formula
   desc "Switch Codex, Claude Code and OpenCode between endpoint + credential profiles"
   homepage "https://github.com/mingtheanlay/charon"
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_darwin_amd64.tar.gz"
-      sha256 "24d774b56585fad0bc3260ec3ee93c83e8bd61de46166bb554f0ab99078d3367"
+      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.2/charon_darwin_amd64.tar.gz"
+      sha256 "95ee7c2c08b8c3c991394058ade9e7bf40aacd933103ac4b7ed1b379a500199c"
 
       define_method(:install) do
         bin.install "charon"
@@ -21,8 +21,8 @@ class Charon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_darwin_arm64.tar.gz"
-      sha256 "02817b8f4861e7b4cd732f1bcbf2add7721f5f43ce3bece5bbf0bb366359658a"
+      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.2/charon_darwin_arm64.tar.gz"
+      sha256 "d5ddc440cebb6b5480271836ca7093edcee22960f455314802b12f030e6d94a2"
 
       define_method(:install) do
         bin.install "charon"
@@ -35,8 +35,8 @@ class Charon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_linux_amd64.tar.gz"
-      sha256 "0bdf918279f01dc44c197170d4766169a0ad0d6eb6203270865ef9d504908af0"
+      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.2/charon_linux_amd64.tar.gz"
+      sha256 "b264734df6f2330baf65f4b039c44e5d90797a09a7d028d902ede1cfd038085c"
       define_method(:install) do
         bin.install "charon"
         bash_completion.install "completions/charon.bash" => "charon"
@@ -45,8 +45,8 @@ class Charon < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.1/charon_linux_arm64.tar.gz"
-      sha256 "24f6f32fbcbab8e9bf860a6d1d213f33eef2b594054a0bd1ef7f34d9df8077c1"
+      url "https://github.com/mingtheanlay/charon/releases/download/v1.3.2/charon_linux_arm64.tar.gz"
+      sha256 "8669644210cd830f433987a2c7e4584dacae6c2fdc6cb4e1b889ff8a488e8e64"
       define_method(:install) do
         bin.install "charon"
         bash_completion.install "completions/charon.bash" => "charon"
